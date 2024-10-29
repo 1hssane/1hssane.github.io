@@ -10,7 +10,7 @@ import time
 def setup_driver():
     print("Setting up the Chrome WebDriver...")
     chrome_options = Options()
-  #  chrome_options.add_argument("--headless")  # Optional: comment this if you want to see the browser
+    chrome_options.add_argument("--headless")  # Optional: comment this if you want to see the browser
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
@@ -27,7 +27,6 @@ def get_soup(driver, url):
     return BeautifulSoup(driver.page_source, 'html.parser')
 # API Configuration
 API_URL = "https://api.sns.sobrus.ovh/api/purchase-orders/robot" 
-API_KEY = "" 
 LINK = "https://lodimed.ma"
 
 
